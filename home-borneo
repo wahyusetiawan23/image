@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500&display=swap" rel="stylesheet" />
+    <title>Home</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap4.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+    <style>
+      @media (min-width: 1200px) {
+        .container,
+        .container-lg,
+        .container-md,
+        .container-sm,
+        .container-xl {
+          max-width: 1440px !important;
+        }
+      }
+      @media (min-width: 992px) and (max-width: 1200) {
+        .container,
+        .container-lg,
+        .container-md,
+        .container-sm {
+          max-width: 1100px !important;
+        }
+      }
+      @media (min-width: 768px) and (max-width: 992px) {
+        .container,
+        .container-md,
+        .container-sm {
+          max-width: 920px !important
+          ;
+        }
+      }
+      @media (min-width: 576px) and (max-width: 768px) {
+        .container,
+        .container-sm {
+          max-width: 640px !important;
+        }
+      }
+      .img-hero-real {
+        width: 100%;
+        background-image: url("/assets/img/bg-hero.png");
+        background-position: 50% 20%;
+        background-repeat: no-repeat;
+        height: 100%;
+      }
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+
+      .hero-real {
+        background: linear-gradient(279.15deg, #984ddd 0%, #9153f8 101.2%, rgba(151, 76, 226, 0) 101.2%) !important;
+        color: #fff;
+        position: relative;
+      }
+
+      .hero-real h1 {
+        margin-top: 50px;
+        font-size: 58px;
+        font-weight: 700;
+      }
+
+      .hero-real p {
+        font-size: 22px;
+      }
+
+      .hero-real .img-hero img {
+        width: 100%;
+        /* object-fit: cover; */
+        border-radius: 3px;
+      }
+
+      .hero-real .img-hero {
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+      .notice-update {
+        margin-bottom: 50px;
+      }
+      .notice-update h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
+      .notice-update .card {
+        width: 100%;
+        border-radius: 15px;
+        border: none;
+        box-shadow: 0px 0px 10px rgba(155, 95, 227, 0.25);
+      }
+
+      .about-real {
+        background-color: #f3eeff;
+      }
+
+      .about-real .row {
+        margin-top: 50px;
+      }
+
+      .about-real h5,
+      .featured .header-feature h5 {
+        font-size: 24px;
+        font-weight: 600;
+      }
+
+      .about-real img {
+        width: 100%;
+      }
+
+      .featured .header-feature h5 {
+        margin-top: 50px;
+        text-align: center;
+      }
+
+      .featured .row {
+        margin-bottom: 50px;
+        margin-top: 30px;
+      }
+
+      .featured .row .card {
+        background-color: #f3eeff;
+        border: none;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+
+      .featured .card-body {
+        padding: 15px 25px 0px 25px;
+      }
+
+      .featured .icon-featured {
+        display: flex;
+        justify-content: center;
+      }
+
+      .featured .icon-featured img {
+        width: 60px;
+      }
+
+      .featured .text {
+        text-align: center;
+      }
+
+      .featured .text .title {
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      .featured .text .desc {
+        margin-top: -10px;
+      }
+
+      .footer-real {
+        background: linear-gradient(279.15deg, #984ddd 0%, #9153f8 101.2%, rgba(151, 76, 226, 0) 101.2%);
+      }
+
+      .footer-real .btn-footer {
+        background-color: #fff;
+        border: none;
+        color: #202020;
+        border-radius: 20px;
+        font-weight: 600;
+      }
+      .dataTables_length {
+        margin: 5px 5px 5px 10px;
+      }
+
+      .dataTables_filter input {
+        width: 150px !important;
+      }
+
+      .dataTables_filter {
+        margin-left: -10px;
+        margin-top: 5px;
+      }
+
+      .dataTables_info {
+        margin-top: -10px;
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
+
+      .notice-update .page-item.active .page-link {
+        border-color: #9252f3;
+        background-color: #9252f3;
+        font-size: 14px;
+      }
+
+      .page-item .page-link {
+        font-size: 14px;
+      }
+      .page-item.disabled .page-link {
+        font-size: 14px;
+        color: #38265e;
+      }
+
+      .page-item.disabled.previous .page-link {
+        color: #dbdbdb;
+      }
+    </style>
+  </head>
+
+  <body class="d-flex flex-column min-vh-100">
+    <!-- navbar -->
+    <!-- akhir navbar -->
+    <!-- hero -->
+    <section class="hero-real">
+      <div class="img-hero-real">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="text">
+                <h1>Borneo Schematics</h1>
+                <p>A professional mobile phone repair information query tool, making repairs so easy!</p>
+              </div>
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-6">
+              <div class="img-hero"><img src="img/IMAGE1.png" alt="" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- akhir hero -->
+    <!-- update -->
+    <!-- update -->
+    <section class="notice-update">
+      <div class="container mt-5">
+        <div class="row text-center">
+          <div class="col-md">
+            <h1 class="fw-bold">BRUTAL DAILY UPDATE</h1>
+          </div>
+        </div>
+        <div class="row d-flex justify-content-center mt-2">
+          <div class="col-md-12">
+            <div class="card text-start">
+              <div class="card-body table-responsive">
+                <table id="example" class="table table-striped table-bordered example">
+                  <thead>
+                    <tr>
+                      <th scope="col">Realese Date</th>
+                      <th scope="col">Brand</th>
+                      <th scope="col">Type</th>
+                      <th scope="col">Category</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td scope="row">2022-08-25</td>
+                      <td>Model1</td>
+                      <td>Type1</td>
+                      <td>Category1</td>
+                    </tr>
+                    <tr>
+                      <td scope="row">2022-08-25</td>
+                      <td>Model2</td>
+                      <td>Type2</td>
+                      <td>Category2</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- akhir update -->
+    <!-- about -->
+    <section class="about-real">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5">
+            <h5>Borneo Schematics Tools</h5>
+            <p>
+              is a collection of visual information in the form of paths, measuring points, value information for comparison, which is very useful for technicians, in their work technicians often need to reference data other than schematics
+              such as reference values ​​from normal machines, and take measurements by frequently opening schematics and PCB layouts. The principle of hardware solutions is to simplify your work in measuring and troubleshooting
+              documentation into a more practical way of working before For reseller, we offer quantity sales at a pretty good price for you and easy reseller terms.
+              <b> but we do regulate for the end user sales price, so that resellers feel comfortable selling our products.</b>
+            </p>
+          </div>
+          <div class="col-md-2"></div>
+          <div class="col-md-5">
+            <img src="assets/img/img-about.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- akhir about -->
+    <!-- feature -->
+    <section class="featured">
+      <div class="container">
+        <div class="header-feature">
+          <h5>Featured</h5>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="icon-featured"><img src="phone.png" alt="" /></div>
+                <div class="text">
+                  <p class="title">Smartphone Hardware Solutios</p>
+                  <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum dolor at exercitationem?</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="icon-featured"><img src="part-finder.png" alt="" /></div>
+                <div class="text">
+                  <p class="title">PCD Part Compatible Database</p>
+                  <p class="desc">orci vitae tincidunt elementum id ipsum at Donec facilisis</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="icon-featured"><img src="pdf.png" alt="" /></div>
+                <div class="text">
+                  <p class="title">PDF Schematics</p>
+                  <p class="desc">orci vitae tincidunt elementum id ipsum at Donec facilisis</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="icon-featured"><img src="bitmap.png" alt="" /></div>
+                <div class="text">
+                  <p class="title">Bitmap / PCB Layout</p>
+                  <p class="desc">orci vitae tincidunt elementum id ipsum at Donec facilisis</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="icon-featured"><img src="connector.png" alt="" /></div>
+                <div class="text">
+                  <p class="title">Connector Equivalent</p>
+                  <p class="desc">orci vitae tincidunt elementum id ipsum at Donec facilisis</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="icon-featured"><img src="board.png" alt="" /></div>
+                <div class="text">
+                  <p class="title">Sub Board Hardware Solutions</p>
+                  <p class="desc">orci vitae tincidunt elementum id ipsum at Donec facilisis</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="icon-featured"><img src="datawork.png" alt="" /></div>
+                <div class="text">
+                  <p class="title">Borneo Dataworks</p>
+                  <p class="desc">orci vitae tincidunt elementum id ipsum at Donec facilisis</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="icon-featured"><img src="thermistor.png" alt="" /></div>
+                <div class="text">
+                  <p class="title">Thermistor</p>
+                  <p class="desc">orci vitae tincidunt elementum id ipsum at Donec facilisis</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="icon-featured"><img src="combine.png" alt="" /></div>
+                <div class="text">
+                  <p class="title">Combine Solutions</p>
+                  <p class="desc">orci vitae tincidunt elementum id ipsum at Donec facilisis</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- akhir feature -->
+
+    <!-- footer -->
+
+    <!-- akhir footer -->
+
+    <script type="text/javascript">
+      window.$crisp = [];
+      window.CRISP_WEBSITE_ID = "78460843-96a1-4ef2-bb55-b5769f023e0d";
+      (function () {
+        d = document;
+        s = d.createElement("script");
+        s.src = "https://client.crisp.chat/l.js";
+        s.async = 1;
+        d.getElementsByTagName("head")[0].appendChild(s);
+      })();
+    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script>
+      document.getElementById("home").className += " nav-active";
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap4.min.js"></script>
+    <script src="assets/js/pagination.js"></script>
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".example").DataTable();
+      });
+    </script>
+  </body>
+</html>
