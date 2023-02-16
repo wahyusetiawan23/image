@@ -1,13 +1,53 @@
-   .hero-real .img-hero img {
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+body {
+        font-family: "Montserrat", sans-serif;
+      }
+      .bg-nav {
+        background-color: #f3eeff;
+        transition: background-color 0.3s ease;
+      }
+      .navbar .btn-con {
+        background-color: #9252f3;
+        border-color: #9252f3;
+        color: #fff;
+        border-radius: 20px;
+      }
+
+.navbar-brand img {
+        width: 50px;
+      }
+.hero-real h1 {
+        margin-top: 50px;
+        font-size: 58px;
+        font-weight: 900;
+        font-style: italic;
+        line-height: 60px;
+        letter-spacing: 0.02em;
+      }
+
+      .hero-real .img-hero img {
         width: 70%;
         border-radius: 3px;
-        margin-bottom: 10%;
       }
 
       .hero-real .img-hero {
         margin-top: 50px;
         text-align: right;
       }
-.img-hero-real {
-        height: 500px;
+   .img-hero-real {
+        width: 100%;
+        background-position: 50% 20%;
+        background-repeat: no-repeat;
+        padding-bottom: 50px;
+      }
+
+.notice-update h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        font-weight: 600;
       }
