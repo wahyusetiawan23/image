@@ -1,0 +1,10 @@
+   .hero-real .img-hero img {
+        width: 70%;
+        border-radius: 3px;
+        margin-bottom: 10%;
+      }
+
+      .hero-real .img-hero {
+        margin-top: 50px;
+        text-align: right;
+      }
