@@ -1,0 +1,40 @@
+   <iconify-icon icon="ic:round-grid-view" width="28"></iconify-icon>
+   
+   <div class="categori-simpatisan mt-5">
+        <div class="main-content-service">
+          <div class="menu-admin">
+            <div class="card">
+              <div class="card-body">
+                <a href="simpatisan-sub.html">
+                  <div class="row">
+                    <div class="col-10 d-flex">
+                      <iconify-icon icon="mdi:account-multiple-check" width="20" height="20"></iconify-icon>
+                      <span class="mx-2">Relawan</span>
+                    </div>
+                    <div class="col-2 justify-content-end d-flex">
+                      <i class="fa-solid fa-chevron-right fa-lg"></i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="menu-admin">
+            <div class="card">
+              <div class="card-body">
+                <a href="simpatisan-sub.html">
+                  <div class="row">
+                    <div class="col-10 d-flex">
+                      <iconify-icon icon="mdi:account-multiple-check" width="20" height="20"></iconify-icon>
+                      <span class="mx-2">Saksi</span>
+                    </div>
+                    <div class="col-2 justify-content-end d-flex">
+                      <i class="fa-solid fa-chevron-right fa-lg"></i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
