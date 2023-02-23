@@ -1,0 +1,67 @@
+<div class="home-relawan">
+        <!-- header -->
+        <div class="header">
+          <div class="main">
+            <a href="profil.html">
+              <div class="d-flex">
+                <figure class="header-one">
+                  <img class="img-ava" src="assets/img/img-dprd 1.png" alt="" />
+                </figure>
+                <div class="header-name">
+                  <h5>Esther Howard</h5>
+                  <span class="text-secondary">Relawan</span>
+                </div>
+              </div>
+            </a>
+            <div class="dropdown">
+              <a class="btn navbar-brand" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <iconify-icon icon="ri:logout-circle-r-fill" width="28" height="28"></iconify-icon> </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#">Logout ! <i class="fa-solid px-2 fa-arrow-right"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- akhir header -->
+        <!-- content -->
+        <div class="info-dashboard" style="margin-top: 70px">
+          <div class="alert alert-primary alert-dismissible fade show" role="alert">
+            <div class="row">
+              <div class="col-2">
+                <i class="fa-solid fa-circle-info fa-xl"></i>
+              </div>
+              <div class="col-10">
+                <span>Judul</span>
+                <p>A simple primary alert with Give it a click if you like. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis placeat assumenda commodi vero, unde suscipit!</p>
+              </div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="pesan" style="margin-top: 0px; margin-bottom: 50px">
+          <div class="card" style="border-radius: 10px">
+            <div class="card-header">Kecamatan/Kelurahan/TPS</div>
+            <div class="card-body card-pesan">
+              <div class="mb-2">
+                <label for="exampleFormControlInput1" class="form-label">Total Suara</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" />
+              </div>
+              <div class="mb-2">
+                <label for="exampleFormControlInput1" class="form-label">Suara Sah</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" />
+              </div>
+              <div class="mb-2">
+                <label for="exampleFormControlInput1" class="form-label">Suara Tidak Sah</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" />
+              </div>
+              <div class="mb-2">
+                <label for="exampleFormControlInput1" class="form-label">Suara Calon</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" />
+              </div>
+              <a href="" class="btn btn-primary w-100">Input</a>
+            </div>
+          </div>
+        </div>
+        <!-- akhir content -->
+      </div>
