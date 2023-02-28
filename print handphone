@@ -13,9 +13,6 @@
         margin-top: 20px;
         color: #232323;
       }
-      .text-secondary-d1 {
-        color: #202020 !important;
-      }
       .page-header {
         margin: 0 0 1rem;
         padding-bottom: 1rem;
@@ -34,104 +31,7 @@
         font-size: 1.75rem;
         font-weight: 300;
       }
-      .brc-default-l1 {
-        border-color: #dce9f0 !important;
-      }
 
-      .ml-n1,
-      .mx-n1 {
-        margin-left: -0.25rem !important;
-      }
-      .mr-n1,
-      .mx-n1 {
-        margin-right: -0.25rem !important;
-      }
-      .mb-4,
-      .my-4 {
-        margin-bottom: 1.5rem !important;
-      }
-
-      hr {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        border: 0;
-        border-top: 1px solid rgba(0, 0, 0, 0.1);
-      }
-
-      .text-grey-m2 {
-        color: #202020 !important;
-      }
-
-      .text-success-m2 {
-        color: #86bd68 !important;
-      }
-
-      .font-bolder,
-      .text-600 {
-        font-weight: 600 !important;
-      }
-
-      .text-110 {
-        font-size: 110% !important;
-      }
-      .text-blue {
-        color: #202020 !important;
-      }
-      .pb-25,
-      .py-25 {
-        padding-bottom: 0.75rem !important;
-      }
-
-      .pt-25,
-      .py-25 {
-        padding-top: 0.75rem !important;
-      }
-      .bgc-default-tp1 {
-        background-color: rgba(121, 169, 197, 0.92) !important;
-      }
-      .bgc-default-l4,
-      .bgc-h-default-l4:hover {
-        background-color: #f3f8fa !important;
-      }
-      .page-header .page-tools {
-        -ms-flex-item-align: end;
-        align-self: flex-end;
-      }
-
-      .btn-light {
-        color: #757984;
-        background-color: #f5f6f9;
-        border-color: #dddfe4;
-      }
-      .w-2 {
-        width: 1rem;
-      }
-
-      .text-120 {
-        font-size: 120% !important;
-      }
-      .text-primary-m1 {
-        color: #4087d4 !important;
-      }
-
-      .text-danger-m1 {
-        color: #dd4949 !important;
-      }
-      .text-blue-m2 {
-        color: #68a3d5 !important;
-      }
-      .text-150 {
-        font-size: 150% !important;
-      }
-      .text-60 {
-        font-size: 60% !important;
-      }
-      .text-grey-m1 {
-        color: #202020 !important;
-      }
-      .align-bottom {
-        vertical-align: bottom !important;
-      }
       .note p {
         margin-top: -10px;
       }
@@ -189,6 +89,9 @@
       .invoice .title {
         font-size: 1.2rem;
         font-weight: 600;
+      }
+      .text-600 {
+        font-weight: 600 !important;
       }
       hr {
         margin-top: 5px !important;
@@ -262,10 +165,9 @@
             <div class="d-flex justify-content-start">
               <div>
                 <div class="my-2"><span class="text-600 text-90">To :</span> Alex Doe</div>
-                <div class="my-2"><span class="text-600 text-90">Address :</span> Purwakarta</div>
-                <div class="my-2"><span class="text-600 text-90">Phone Number :</span> 08</div>
                 <div class="my-2"><span class="text-600 text-90">Date Received :</span> Oct 12, 2019</div>
                 <div class="my-2 xx"><span class="text-600 text-90">Warranty Check :</span> <a href="https://rbm-borneo.com/Store/samsultoko" target="_blank" rel="noopener noreferrer">https://rbm-borneo.com/Store/samsultoko</a></div>
+                <div class="my-2 xx"><span class="text-600 text-90">Warranty Check :</span> Oct 12, 2019</div>
               </div>
             </div>
           </div>
@@ -275,11 +177,8 @@
           <div class="col-md-7">
             <div class="d-flex justify-content-end">
               <div>
-                <div class="my-2"><i class="fa fa-circle text-xs mr-1"></i> <span class="text-600 text-90">Date Service</span> Oct 12, 2019</div>
                 <div class="my-2"><i class="fa fa-circle text-xs mr-1"></i> <span class="text-600 text-90">Admin :</span> Samsul</div>
                 <div class="my-2"><i class="fa fa-circle text-xs mr-1"></i> <span class="text-600 text-90">Technician :</span> Richard</div>
-                <div class="my-2"><i class="fa fa-circle text-xs mr-1"></i> <span class="text-600 text-90">Date Received :</span> Oct 12, 2019</div>
-                <div class="my-2"><i class="fa fa-circle text-xs mr-1"></i> <span class="text-600 text-90">Warranty Until :</span> Oct 12, 2019</div>
               </div>
             </div>
           </div>
@@ -292,6 +191,7 @@
             <thead>
               <tr>
                 <th scope="col">Product</th>
+                <th scope="col">Imei</th>
                 <th scope="col">Qty</th>
                 <th scope="col">Price</th>
                 <th scope="col">Total Price</th>
@@ -300,6 +200,7 @@
             <tbody>
               <tr>
                 <td>Redmi POCO</td>
+                <td>1</td>
                 <td>1</td>
                 <td>18.000.000</td>
                 <td>20.000.000</td>
